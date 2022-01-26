@@ -1,84 +1,102 @@
 <style>
     li {
-        margin-bottom: 12px;
-        margin-left: 18px;
+        list-style-type: none;
     }
 </style>
 <div style="height: 72px; width: 100%; background-color: #004c72; ">
-    <div style="background-color: white; width: 17px; height: 66px; margin-left: 19px; display: flex;" />
-    <img style="height: 43.5px; width:180px; margin-top: 12.8px; margin-left: 68.45px;" src="recursos/imgs/SI_H1.png">
-    <img style="height: 73px; margin-left:170.85px;" src="recursos/imgs/SI_H2.png">
-    <img style="height: 46.8px; width:56.75px;  position: absolute; right: 1px;" src="recursos/imgs/SI_H3.png">
+    <div style="background-color: white; width: 17px; height: 66px; margin-left: 19px; display: flex;" /><img
+        style="height: 43.5px; width:180px; margin-top: 12.8px; margin-left: 68.45px;"
+        src="recursos/imgs/SI_H1.png"><img style="height: 73.05px; width:108.45px; margin-left:170.85px;"
+        src="recursos/imgs/SI_H2.png"><img style="height: 46.8px; width:56.75px;  position: absolute; right: 1px;"
+        src="recursos/imgs/SI_H3.png">
 </div>
-<div class="coluna-esquerda largura-1_1" style="max-width: 888px;">
-    <p style="width: 100%; text-align: center; margin-top: 60px; color: #004D73; font-weight: bolder;">
-        Clique nos vídeos para visualizar exemplos de incidência e prevalência.</p>
-    <div style="display: inline-flex; width: 100%; flex-wrap: wrap; justify-content: space-evenly;">
-        <div style="text-align: center; margin-top: 40px; cursor: pointer;"
-            class="btn btn animate__animated animate__tada" data-toggle="modal" data-target="#modalCentro1">
-            <img src="recursos/imgs/SI_37.png" style="width: 233px; height: 180px;">
-            <div
-                style="margin-left: 45px; background-color: #fac900; margin-top: 10px; width: 140px; height: 30px; text-align: center;">
-                <p style="color: #004c72; font-weight: bolder; padding: 10px; text-align: center;">Incidência</p>
-            </div>
+<div class="coluna-esquerda largura-1_1" style="width: 100%; margin-top: 60px;">
+    <p style="text-align: center; margin-bottom: 60px;"><strong>No que se
+            refere a doenças
+            e agravos não transmissíveis, vamos nos familiarizar com os conceitos de incidência e<br>
+            prevalência. Clique nas sanfonas para expandir as informações.</strong></p>
+    <img src="recursos/imgs/SI_18a.png"
+        style="margin-left: 130px; margin-top: -10px; width: 633.95px; height: 65px; cursor: pointer;"
+        class="btn animate__animated animate__backInRight" id="botao_1">
+    <img src="recursos/imgs/SI_18b.png"
+        style="margin-left: 130px; margin-top: 10px; width: 633.95px; height: 65px; cursor: pointer;"
+        class="btn animate__animated animate__backInLeft" id="botao_2">
+
+    <div>
+        <div id="janela_1"
+            style="position: relative; width: 563px; height: 280px; background-color: rgba(0, 77, 115, 0.9); border-radius: 10px; flex-wrap: nowrap; margin-left: 175px; margin-top: -244px; cursor: pointer;">
+            <h1 style="padding: 10px 0px 0px 10px; color: #fac900;">Incidência</h1>
+            <p style="font-weight: normal;padding-left: 10px; color: white;">
+                É a medida do número de casos novos de uma doença, chamados de casos incidentes,<br> originados de uma
+                população em risco
+                ser acometida pela doença em questão, em um<br> período determinado.
+            </p>
+            <p style="font-weight: normal;padding-left: 10px; color: white;">
+                A incidência é considerada como um<strong> indicador da velocidade de ocorrência de uma doença ou<br>
+                    Incidência
+                    outro evento de saúde</strong> na população. Consequentemente, ela fornece uma estimativa do
+                risco<br> absoluto de um
+                indivíduo saudável adoecer.
+            </p>
+            <p style="font-weight: normal;padding-left: 10px; color: white;">
+                Imagine que a incidência funciona como o registro da doença feito por um filme, em que casos<br> novos
+                podem
+                ser incluídos continuamente na cena. Diferentemente da prevalência, a qual se<br> assePmrelhvaa ulêmna
+                cfotioagrafia, a incidência é dinâmica, visto que a realidade observada pode<br> mudar a cada instante.
+            </p>
+            <p style="font-weight: normal;padding-left: 10px; color: white;">
+                Incidência de doença B = (no de casos novos da doença B em um período/ no total de pessoas<br> em risco
+                no
+                começo do
+                mesmo
+                período) x fator.
+            </p>
         </div>
-        <div style="text-align: center; margin-top: 40px; cursor: pointer;"
-            class="btn btn animate__animated animate__tada" data-toggle="modal" data-target="#modalCentro2">
-            <img src="recursos/imgs/SI_37.png" style="width: 233px; height: 180px;">
-            <div style="margin-left: 45px; background-color: #fac900; margin-top: 10px; width: 140px; height: 30px; text-align: center;">
-                <p style="color: #004c72; font-weight: bolder; padding: 10px; text-align: center;">Prevalência</p>
-            </div>
+
+        <div id="janela_2"
+            style="position: relative; width: 568px; height: 190px; background-color: rgba(0, 77, 115, 0.9); border-radius: 10px; flex-wrap: nowrap; margin-left: 176px; margin-top: -185px; cursor: pointer;">
+            <h1 style="padding: 10px 0px 0px 10px; color: #fac900;">Prevalência</h1>
+            <p style="font-weight: normal;padding-left: 10px; color: white;">
+                É a medida do número total de casos existentes, chamados de casos prevalentes, de uma<br> doença em um
+                ponto
+                ou período e em
+                uma população determinada, sem distinguir se são<br> casos novos ou não. A prevalência é um<strong>
+                    indicador da
+                    magnitude da
+                    presença de uma doença ou<br> outro evento de saúde</strong> na população.
+            </p>
+            <p style="font-weight: normal;padding-left: 10px; color: white;">
+                Imagine a prevalência como se fosse uma fotografia que capta uma determinada situação ou<br> uma cena
+                qualquer em um único
+                instante.
+            </p>
+            <p style="font-weight: normal;padding-left: 10px; color: white;">
+                Prevalência de doença A = (no de pessoas com a doença A num período / no total de pessoas<br> no mesmo
+                período) x fator.
+            </p>
         </div>
+
+
     </div>
 </div>
-<!-- Modal -->
-<div class="modal fade" id="modalCentro1" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
-    aria-hidden="true" style="overflow-y:hidden;">
-    <div class="modal-dialog modal-dialog-centered " role="document">
-        <div class="modal-content" style="position: fixed; top: 72px; left: 0; width: 100%; height: 370px;">
-            <div data-dismiss="modal" class="close" aria-hidden="true" style="margin-left: auto; padding-right: 10px;">
-                &times;</div>
-            <video id="full-video" width="100%" height="345px" controls>
-                <source src="recursos/video/Mod02_aula03.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="modalCentro2" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
-    aria-hidden="true" style="overflow-y:hidden;">
-    <div class="modal-dialog modal-dialog-centered " role="document">
-        <div class="modal-content" style="position: fixed; top: 72px; left: 0; width: 100%; height: 370px;">
-            <div data-dismiss="modal" class="close" aria-hidden="true" style="margin-left: auto; padding-right: 10px;">
-                &times;</div>
-            <video id="full-video" width="100%" height="345px" controls>
-                <source src="recursos/video/Mod02_aula03.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-
-        </div>
-    </div>
-</div>
-<!-- Fim modal -->
-
-
-<footer style="height: 39.05px; width: 100%; background-color: #004c72;">
-    <img style="height: 22.65px; margin: 8.5px 37.05px;" src="recursos/imgs/SI_F1.png">
-    <img style="height: 22.75px; margin: 8.5px 37.05px; position: absolute; right: 0px;" src="recursos/imgs/SI_F2.png">
+<footer style="height: 39.05px; width: 100%; background-color: #004c72;"><img
+        style="height: 22.65px; margin: 8.5px 37.05px;" src="recursos/imgs/SI_F1.png"><img
+        style="height: 22.75px; margin: 8.5px 37.05px; position: absolute; right: 0px;" src="recursos/imgs/SI_F2.png">
 </footer>
-
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('.close').click(function (event) {
-            $("#full-video").get(0).pause();
-            $("#full-video").get(0).currentTime = 0;
-            event.preventDefault();
-        });
-        $('.btn').click(function (event) {
-            $("#full-video").get(0).currentTime = 0;
-            $("#full-video").get(0).play();
-        });
-    });
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
 </script>
