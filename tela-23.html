@@ -41,40 +41,31 @@
     </div>
 
 
-    <div style="display: flex;
-    position: absolute;
-    z-index: 10;
-    /* margin-top: 25px; */
-    top: 450px;
-    left: 90px;">
+    <div style="display: flex; position: absolute; z-index: 10; margin-top: 25px;">
 
         <div id="drag1" draggable="true" ondragstart="drag(event)"
-            style="  background-color: #fac900; margin-top: -90px; width: 140px; height: 30px; text-align: center;">
+            style="margin-left: 45px; background-color: #fac900; margin-top: -90px; width: 140px; height: 30px; text-align: center;">
             <p style="color: #004c72; font-weight: bolder; text-align: center;">Tuberculose</p>
         </div>
         <div id="drag2" draggable="true" ondragstart="drag(event)"
-            style="  background-color: #fac900; margin-top: -90px; width: 140px; height: 30px; text-align: center;">
+            style="margin-left: 45px; background-color: #fac900; margin-top: -90px; width: 140px; height: 30px; text-align: center;">
             <p style="color: #004c72; font-weight: bolder; text-align: center;">Escabiose/sarna</p>
         </div>
 
         <div id="drag3" draggable="true" ondragstart="drag(event)"
-            style="  background-color: #fac900; margin-top: -90px; width: 140px; height: 30px; text-align: center;">
+            style="margin-left: 45px; background-color: #fac900; margin-top: -90px; width: 140px; height: 30px; text-align: center;">
             <p style="color: #004c72; font-weight: bolder; text-align: center;">HIV/Hepatite B</p>
         </div>
 
         <div id="drag4" draggable="true" ondragstart="drag(event)"
-            style="  background-color: #fac900; margin-top: -90px; width: 140px; height: 30px; text-align: center;">
+            style="margin-left: 45px; background-color: #fac900; margin-top: -90px; width: 140px; height: 30px; text-align: center;">
             <p style="color: #004c72; font-weight: bolder; text-align: center;">Covid-19</p>
         </div>
 
     </div>
 
     <div
-        style="display: inline-flex;
-    position: absolute;
-    flex-direction: column;
-    top: 196px;
-    left: 600px;">
+        style="display: inline-flex; position: absolute; flex-direction: column; margin-top: -225px; margin-left: 580px;;">
         <img id="drop1" ondrop="drop(event)" ondragover="allowDrop(event)"
             style="margin-top: 6px; margin-left: 15px; width: 150px;" src="recursos/imgs/SI_22.png">
         <img id="drop2" ondrop="drop(event)" ondragover="allowDrop(event)"
@@ -155,7 +146,7 @@
     $("#feedCerto").hide();
 
     function allowDrop(ev) {
-        ev.preventDefault();
+        //ev.preventDefault();
         console.log('1');
         console.log(ev)
     }
