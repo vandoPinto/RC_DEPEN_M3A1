@@ -179,11 +179,14 @@
             this.className = "empty";
             if (this.id.indexOf('drop') == 0) {
                 $(sub).fadeIn();
-                console.log(drag.id);
-                console.log(this.id);
                 $("#" + drag.id).animate({ top: $(this)[0].offsetTop, left: $(this)[0].offsetLeft }, 1);
                 if (drag.id.split('_')[1] == this.id.split('_')[1]) {
                     //$(janelas[(this.id.split('_')[1] - 1)]).fadeIn();
+                    voltar.map((objeto, index) => {
+                        if (objeto == drag.id) {
+                            voltar[index] = null;
+                        }
+                    })
                 } else {
                     voltar[Number(drag.id.split('_')[1]) - 1] = drag.id;
                 }
@@ -191,8 +194,7 @@
         };
 
         function validarReposta() {
-            console.log(voltar.length);
-            if (voltar.length == 0) {
+            if (voltar.every(elem => elem == null)) {
                 $("#feedCerto").fadeIn();
             } else {
                 voltar.map((objeto, index) => {
@@ -214,6 +216,7 @@
             empty.addEventListener("dragenter", dragEnter);
             empty.addEventListener("dragleave", dragLeave);
             empty.addEventListener("drop", dragDrop);
+            voltar.push(null)
         }
     })
 </script>
